@@ -35,7 +35,7 @@
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
-	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
 	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
 	%subsubsection=TITLE % títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
@@ -63,7 +63,7 @@
 \usepackage{datetime}           % Tempo e hora.
 \usepackage{epstopdf}
 % ---
-		
+\usepackage{outlines}
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
@@ -75,8 +75,6 @@
 % ---
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
-% ---
-
 \usepackage{listings}
 \usepackage{amsmath}		
 \usepackage{amssymb}
@@ -172,7 +170,6 @@
 % Define os textos da citação
 \renewcommand*{\backrefalt}[4]{
 	\ifcase #1 %
-	Nenhuma citação no texto.%
 	\or
 	Citado na página #2.%
 	\else
@@ -184,33 +181,32 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\universidade{Universidade Federal de Santa Catarina}
-\centro{CTC -- Centro Tecnológico}
-\departamento{Departamento de Engenharia Elétrica e Eletrônica}
-\local{Florianópolis}
+\universidade{Universidade Federal da Paraíba}
+\centro{CCSA -- Centro de Ciências Sociais Aplicadas}
+\departamento{Departamento de Economia}
+\local{Paraíba}
 \data{\today}
 
-\autor{Prof. Nome \textsc{Sobrenome}, Dr. Eng.}
+\autor{Pedro Milreu Cunha}
 
 \tipotrabalho{Notas de Aula}
-\disciplina{Eletrônica Industrial}
-\codigo{EEL 7278} % Código da disciplina
-\semestre{2015/2}
-\aula{Aula 01}
-\titulo{Modelo Canônico de Notas de Aula com \abnTeX}
+\disciplina{Introdução à Economia}
+\codigo{1201181} % Código da disciplina
+\semestre{2021.1}
+\aula{Aula "X"}
+\titulo{Teoria do consumidor - escolha ótima}
 
-\preambulo{Modelo canônico de notas de aula em conformidade
-	com as normas ABNT apresentado à comunidade de usuários \LaTeX.}
+\preambulo{Plano de aula apresentado cumprimento requisito do Estágio Docência necessário para obtenção do título de Mestre em Economia Aplicada}
 
-\email{adriano.ruseler@posgrad.ufsc.br}
-\telefone{Tel: +55 (48) 3721-7464, 3721-7445}
-\celular{Cel: +55 (48) 88459814, 91273585}
-\website{\url{http://www.adrianoruseler.com}}
-\laboratorio{INEP -- Instituto de Eletrônica de Potência}
-\campus{Campus Universitário – Trindade, Florianópolis}
-\turma{Minha turma}
-\horario{Meu horário}
-\sala{Minha sala}
+\email{pedro.milreu@academico.ufpb.br}
+\telefone{}
+\celular{Cel: +55 (35) 997459400}
+\website{\url{https://github.com/PedroMilreuCunha}}
+\laboratorio{PPGE -- Programa de Pós-Graduação em Economia}
+\campus{Campus I – João Pessoa, Paraíba}
+\turma{}
+\horario{2N34 4N12}
+\sala{Aulas \textit{online}}
 
 % ---
 % Configurações de aparência do PDF final
@@ -297,122 +293,92 @@
 
 
 \begin{snugshade}
-	\section{Objetivos} % a serem alcançados pelos alunos e não pelo professor. Podem ser divididos em gerais e específicos. 
+	\section{\textbf{Objetivos}} % a serem alcançados pelos alunos e não pelo professor. Podem ser divididos em gerais e específicos. 
 \end{snugshade}
 
 \subsection{Geral} % projeta resultado geral relativo a execução de conteúdos e procedimentos.
 
-Apresentar o princípio de funcionamento das principais topologias retificadoras,
-e uma metodologia de cálculo para projeto das mesmas.
-
-Capacitação para a realização de uma simulação numérica no software PSIM, objetivando a verificação das principais formas de onda e da validades dos cálculos realizados.
-
-Confecção de uma planilha de cálculo, com o uso do software MATHCAD, objetivando o dimensionamento e projeto de uma aplicação hipotética;
-
-
-
+Compreensão de como se dá o processo de escolha ótima do consumidor à partir da união do estudo das preferências e da restrição orçamentária. Dentro disso, obter também o entendimento da relação entre preço, renda e demanda do consumidor por um bem.
 
 \subsection{Específicos} % especificam resultados esperados observáveis (geralmente de 3 a 4).
 
+\begin{outline}
+	
+	\1 Identificar a relação existente entre a taxa marginal de substituição (preferências) e a razão entre os preços dos bens (restrição orçamentária) no ponto de escolha ótima;
+	
+	\2 Entender porque um consumidor racional sempre consome toda a sua renda (há exceções, mas fogem do escopo da aula) e compreender o que é uma alocação factível.
+	
+	\1 Identificar a relação existente entre preços, renda e a demanda por um bem;
+	
+	\2 Entender quando um bem é normal/inferior e também os efeitos renda e substituição.
+	
+	\2 Conhecer os bens de \textit{Giffen} e \textit{Veblen} e compreender que eles são exceção e não a regra.
+
+\end{outline}%
+
+\clearpage%
+
+\begin{snugshade}
+	\section{\textbf{Conteúdos}} % conteúdos programados para a aula organizados em tópicos (de 4 a 8).
+\end{snugshade}
+
+\begin{outline}
+    \1 Preferências e restrição orçamentária
+        \2 Revisão da teoria das preferências, principais propriedades e discussão sobre as curvas de indiferença;
+        \2 Revisão da restrição orçamentária, seu significado e como ela é afetada por mudanças na renda do consumidor e nos preços dos bens.
+	\1 Escolha ótima do consumidor
+		\2 Junção das preferências, representadas pelas curvas de indiferença, com a restrição orçamentária;
+		\2 Análise da igualdade entre a taxa marginal de substituição e a razão entre os preços dos bens no ponto de escolha ótima do consumidor (por que isso ocorre?);
+		\2 Definição de bens normais/inferiores com ênfase na distinção entre essas características e os conceitos de bens complementares/substitutos;
+		\2 Análise das consequências de uma mudança de preços sobre a escolha ótima do consumidor: efeito-renda e efeito-substituição;
+		\2 Breve apresentação dos bens de \textit{Giffen} e \textit{Veblen}.
+\end{outline}
+
+
+\begin{snugshade}
+	\section{\textbf{Procedimentos metodológicos}} % estratégias relevantes adotadas para alcançar os objetivos.
+\end{snugshade}
+
+O primeiro passo é a verificação dos pré-requisitos necessários para entendimento da teoria da escolha ótima do consumidor. Para tanto, é realizada uma curta revisão dos tópicos de preferências e restrição orçamentária seguida de questionamentos aos/dos alunos.
+
+Em seguida, apresenta-se inicialmente a intuição por trás da escolha ótima do consumidor de modo a facilitar o entendimento posterior da motivação teórica dos resultados e também incentivar os alunos a pensarem sob uma ótica econômica. Nessa parte são utilizados exemplos práticos que aproximam os tópicos estudados da realidade dos discentes. Antes de iniciar a próxima seção, é feita uma pausa para permitir que os discentes sanem possíveis dúvidas.
+
+Na última seção, é feita a discussão sobre bens inferiores/normais, efeito-renda e efeito-substituição. Aqui é importante destacar que o conceito de inferior/normal tem relação com a renda e não com o preço dos bens. Além disso, mostrar que a divisão do efeito total em efeito-renda e efeito-substituição é apenas um procedimento teórico visando separar os impactos da renda e dos preços sobre a escolha do consumidor. Nessa seção o uso de figuras é de grande valia uma vez que os conceitos abordados geralmente causam confusão nos alunos. Antes de prosseguir é importante garantir que as ideias principais desse assunto foram entendidas.
+
+Por fim, são apresentados brevemente os bens de \textit{Giffen} e \textit{Veblen} e é discutido como eles violam a Lei da Demanda. Nesse momento é interessante solicitar que os alunos tentem dar exemplos desses bens e que, para finalizar, seja feita uma síntese dos conceitos discutidos na aula.
+
+\begin{snugshade}
+	\section{\textbf{Recursos didáticos}} % quadro, giz, retro-projetor, filme, música, quadrinhos, etc.
+\end{snugshade}
+
 \begin{itemize}
 	
-	\item Obter as principais formas de onda da topologia.
-	\item Equacionar os valores eficazes da corrente de entrada e de saída...
-	\item Simular no PSIM... 
-	\item Montar uma planilha de cálculo...
+	\item Apresentação de \textit{slides}.
 	
 \end{itemize}
 
-\newpage
-
 \begin{snugshade}
-	\section{Conteúdos} % conteúdos programados para a aula organizados em tópicos (de 4 a 8).
+	\section{\textbf{Avaliação}} % pode ser realizada com diferentes propósitos (diagnóstica, formativa e somativa). Interessante explicitar a atividade avaliativa e os critérios de correção.
 \end{snugshade}
 
-\begin{enumerate}
-	\item Retificadores a diodo
-	\begin{itemize}	
-		\item Retificadores a diodo..; %---> inclui definição dos termos 
-		\item Carga resistiva;
-		\item A racionalidade e a história da busca pela liberdade;
-		\item O legado de Hegel.	
-	\end{itemize}
-\end{enumerate}
-
-
-\begin{snugshade}
-	\section{Procedimentos metodológicos} % estratégias relevantes adotadas para alcançar os objetivos.
-\end{snugshade}
-
-A metodologia de ensino inicia-se com a verificação dos pré-requisitos necessários para o entendimento da aula a ser ministrada. Está verificação é realizada com uma breve revisão seguida de questionamentos aos alunos.
-
-A estrutura foco da aula será apresentada iniciando-se pelas etapas de operação, seguindo-se para a apresentação das principais formas de onda. Simulações exploratórias serão apresentadas para verificar a validade do que foi apresentado.
-
-Em seguida, valores relevantes ao projeto e dimensionamento da topologia de potência será apresentado. Estes valores serão verificados por simulação de forma a validar o equacionamento desenvolvido.
-
-Por fim, uma lista de exercícios propostos será apresentada com o intuído de fortalecer a compreensão dos alunos sobre o tema ministrado.
-
-\begin{snugshade}
-	\section{Recursos didáticos} % quadro, giz, retro-projetor, filme, música, quadrinhos, etc.
-\end{snugshade}
-
-\begin{itemize}
-	
-	\item Projetor multimídia, simulador numérico (PSIM), planilha de cálculo (MATHCAD), giz e quadro.
-	
-\end{itemize}
-
-\begin{snugshade}
-	\section{Avaliação} % pode ser realizada com diferentes propósitos (diagnóstica, formativa e somativa). Interessante explicitar a atividade avaliativa e os critérios de correção.
-\end{snugshade}
-
-Ao final da aula o aluno deverá estar apto a resolver uma lista de exercícios propostos contendo os seguintes desafios:
+Ao final da aula o aluno deverá estar apto a realizar os seguintes itens:
 
 \begin{enumerate}	
-	\item Explicar as etapas de operação da topologia apresentada em aula;
-	\item Desenhar as principais formas de onda do conversor estático;
-	\item Calcular valores médios e eficazes das tensões e correntes inerentes da topologia;
-	\item Verificar a validade dos valores calculados via simulação numérica;
-	\item Montar uma planilha de cálculo contemplando um projeto hipotético;
-	\item Dimensionar os semicondutores de potência para atender a uma certa aplicação;	
+	\item Explicar a relação entre as preferências do consumidor e a sua restrição orçamentária no processo de escolha ótima, particularmente o fato do consumidor gastar toda a sua renda e a igualdade entre a TMS e os preços relativos no ponto ótimo;
+	\item Explicar e exemplificar o conceito de bens inferiores/normais;
+	\item Discutir o efeito de variações de renda e de preços sobre a escolha ótima do consumidor;
+	\item Explicar os conceitos de efeito-renda e efeito-substituição;
+	\item Explicar o que são os bens de \textit{Giffen} e \textit{Veblen} e qual motivo faz com que eles violem a Lei da Demanda.
 \end{enumerate}
 
-\clearpage
+\section*{\textbf{Bibliografia básica}}
 
-% Referências bibliográficas
+MANKIW, N. G. \textit{Principles of microeconomics}. 9th edition. ed. Boston, MA: Cen-gage Learning, 2019. ISBN 978-0-357-13348-4 978-0-357-13371-2 978-0-357-13360-6.
 
-\pagestyle{plain}
-\begin{thebibliography}{}
-	
-	\bibitem{IvoBarbi2006} I. Barbi, “Eletrônica de Potência”. Edição do Autor, 6a Edição Florianópolis,
-	2006.
-	
-	\bibitem{DCMBarbi1} D. C. Martins \& I. Barbi, “Eletrônica de Potência: Conversores CC-CC Básicos Não Isolados”. Edição dos Autores, 3a Edição Florianópolis, 2008.
-	
-	\bibitem{DCMBarbi2}	D. C. Martins \& I. Barbi, “Introdução ao Estudo dos Conversores CC-CA”. Edição dos Autores, 2a Edição, Florianópolis-SC, UFSC, Maio/2008.
-	
-	\bibitem{Barbi02} I. Barbi, “Eletrônica de Potência: Projetos de Fontes Chaveadas”. Edição do
-	Autor, 2a Edição, Florianópolis-SC, UFSC, 2007.
-	
-	\bibitem{BarbiFabiana}	I. Barbi \& F. P. de Souza, “Conversores CC-CC Isolados de Alta Freqüênica com Comutação Suave”. Edição dos Autores, Florianópolis, 1999.
-	
-	\bibitem{DCM}	D. C. Martins, “Eletrônica de Potência – Semicondutores de Potência
-	Controlados, Conversores CC-CC Isolados e Conversores CC-CC a Tiristor
-	(Comutação Forçada)”. Publicação Interna – UFSC-INEP, Florianópolis, SC,
-	Maio/2006.
-	
-\end{thebibliography}
+\section*{\textbf{Bibliografia complementar}}
 
+NICHOLSON, W.; SNYDER, C. \textit{Microeconomic theory: basic principles and extensions}. Twelfth edition. Australia ; Boston, MA: Cengage Learning, 2017. ISBN 978-1-305-50579-7.
 
-
-
-
-
-% ----------------------------------------------------------
-% ELEMENTOS PÓS-TEXTUAIS
-% ----------------------------------------------------------
-% \postextual
-
-
+VARIAN, H. R. \textit{Intermediate microeconomics: with calculus}. First edition. New York: W.W. Norton \& Company, 2014. ISBN 978-0-393-12398-2978-0-393-92394-0
 
 \end{document}

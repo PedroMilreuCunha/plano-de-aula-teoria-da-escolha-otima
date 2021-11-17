@@ -1,5 +1,5 @@
 %%
-%% CustomizaÁıes do abnTeX2 (http://abnTeX2.googlecode.com) para a Universidade Federal de Santa Catarina
+%% Customiza√ß√µes do abnTeX2 (http://abnTeX2.googlecode.com) para a Universidade Federal de Santa Catarina
 %%
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3
@@ -66,10 +66,10 @@
 \renewcommand{\equationautorefname}{Equa\c{c}\~ao}
 
 
-\renewcommand{\familydefault}{cmr} % Fonte padr„o utilizada no texto
+\renewcommand{\familydefault}{cmr} % Fonte padr√£o utilizada no texto
 \renewcommand{\rmdefault}{cmr} % Selects a roman (i.e., serifed) font family
 \renewcommand{\sfdefault}{cmss} % Selects a sans serif font family
-\renewcommand{\ttdefault}{cmtt} % Selects a monospaced (ìtypewriterî) font family
+\renewcommand{\ttdefault}{cmtt} % Selects a monospaced (¬ìtypewriter¬î) font family
 
 
 \renewcommand{\ABNTEXpartfont}{\usefont{T1}{cmr}{bx}{n}} % Apendices, anexos...
@@ -134,7 +134,7 @@
 \providecommand{\imprimirsemestre}{}
 \newcommand{\semestre}[1]{\renewcommand{\imprimirsemestre}{#1}}
 
-% Comandos de dados - CÛdigo da disciplina
+% Comandos de dados - C√≥digo da disciplina
 \providecommand{\imprimircodigo}{}
 \newcommand{\codigo}[1]{\renewcommand{\imprimircodigo}{#1}}
 
@@ -162,40 +162,40 @@
 \providecommand{\imprimirsala}{}
 \newcommand{\sala}[1]{\renewcommand{\imprimirsala}{#1}}
 
-% Comandos de dados - hor·rio
+% Comandos de dados - hor√°rio
 \providecommand{\imprimirhorario}{}
 \newcommand{\horario}[1]{\renewcommand{\imprimirhorario}{#1}}
 
 % ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
-% estilo de cabeÁalhos e rodapÈs
+% estilo de cabe√ßalhos e rodap√©s
 % ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
 
 %%criar um novo 
 \makepagestyle{notasUFSC}
 
-%%cabeÁalhos
+%%cabe√ßalhos
 \makeevenhead{notasUFSC}
 {\imprimircodigo\hskip.1cm--\hskip.1cm\imprimirdisciplina\hskip.1cm--\hskip.1cm\imprimiraula} %%pagina par
 {}
-{EEL/CTC/UFSC}
-\makeoddhead{notasUFSC} %%pagina Ìmpar ou com oneside
+{DE/CCSA/UFPB}
+\makeoddhead{notasUFSC} %%pagina √≠mpar ou com oneside
 {\imprimircodigo\hskip.1cm--\hskip.1cm\imprimirdisciplina\hskip.1cm--\hskip.1cm\imprimiraula}
 {}
-{EEL/CTC/UFSC}
+{DE/CCSA/UFPB}
 \makeheadrule{notasUFSC}{\textwidth}{\normalrulethickness} %linha
 %\makefootrule{notasUFSC}{\textwidth}{\normalrulethickness}{1pt}
 
-%% rodapÈ
+%% rodap√©
 \makeevenfoot{notasUFSC} %%pagina par
 {}
 {}
-{P·gina \thepage\ de \thelastpage}
-\makeoddfoot{notasUFSC} %%pagina Ìmpar ou com oneside
+{P√°gina \thepage\ de \thelastpage}
+\makeoddfoot{notasUFSC} %%pagina √≠mpar ou com oneside
 {}
 {}
-{P·gina \thepage\ de \thelastpage}
+{P√°gina \thepage\ de \thelastpage}
 
 
 %\textsc{\Large \imprimircentro }\\[0.5cm] % Major heading such as course name
@@ -206,24 +206,24 @@
 
 \makerunningwidth{letterUFSC}{1.1\textwidth}
 
-%%cabeÁalhos
+%%cabe√ßalhos
 \makeevenhead{letterUFSC}
-{\includegraphics[width=60pt]{logo-ufsc.pdf}} %%pagina par
+{\includegraphics[width=60pt]{Figuras/logo-ufpb.png}} %%pagina par
 {\textsc{\imprimiruniversidade} \\ \textsc{\imprimircentro} \\ \textsc{\imprimirdepartamento} }
-{\includegraphics[width=60pt]{logo-ctc.pdf}}
-\makeoddhead{letterUFSC} %%pagina Ìmpar ou com oneside
-{\includegraphics[width=60pt]{logo-ufsc.pdf}}
+{\includegraphics[width=60pt]{Figuras/logo-ccsa.png}}
+\makeoddhead{letterUFSC} %%pagina √≠mpar ou com oneside
+{\includegraphics[width=60pt]{Figuras/logo-ufpb.png}}
 {\textsc{\imprimiruniversidade} \\ \textsc{\imprimircentro} \\ \textsc{\imprimirdepartamento} }
-{\includegraphics[width=60pt]{logo-ctc.pdf}}
+{\includegraphics[width=60pt]{Figuras/logo-ccsa.png}}
 \makeheadrule{letterUFSC}{1.1\textwidth}{\normalrulethickness} %linha
 \makefootrule{letterUFSC}{1.1\textwidth}{\normalrulethickness}{1pt}
 
-%% rodapÈ
+%% rodap√©
 \makeevenfoot{letterUFSC} %%pagina par
 {{\small \imprimirautor \\ \imprimirlaboratorio \\ \imprimirwebsite}}
 {}
 {\small  \imprimiremail \\ \imprimirtelefone \\ \imprimircelular}
-\makeoddfoot{letterUFSC} %%pagina Ìmpar ou com oneside
+\makeoddfoot{letterUFSC} %%pagina √≠mpar ou com oneside
 {\small \imprimirautor \\ \imprimirlaboratorio \\ \imprimirwebsite}
 {}
 {\small  \imprimiremail \\ \imprimirtelefone \\ \imprimircelular}
@@ -235,7 +235,7 @@
 % ------------------------------------------------------------------------
 
 % ---
-% Impress„o da Capa
+% Impress√£o da Capa
 \newcommand{\imprimircapaUFSC}{%
 	
 %titlepage
@@ -252,14 +252,14 @@
 
 % Upper part of the page. The '~' is needed because \\
 % only works if a paragraph has started.
-\includegraphics[width=0.25\textwidth]{logo-ufsc.pdf}~\\[1cm]
+\includegraphics[width=0.25\textwidth]{Figuras/logo-ufpb.png}~\\[1cm]
 
 %----------------------------------------------------------------------------------------
 %	HEADING SECTIONS
 %----------------------------------------------------------------------------------------
 
 \textsc{\LARGE Universidade Federal}\\[0.5cm] % Name of your university/college
-\textsc{\LARGE de Santa Catarina}\\[1cm] % Name of your university/college
+\textsc{\LARGE da Para√≠ba}\\[1cm] % Name of your university/college
 \textsc{\Large \imprimircentro }\\[0.5cm] % Major heading such as course name
 \textsc{\large \imprimirdepartamento}\\[1.5cm] % Minor heading such as course title
 
@@ -318,14 +318,14 @@
 % ---
 
 % ---
-% Impress„o da Capa
+% Impress√£o da Capa
 \newcommand{\imprimirletterUFSC}{%
 	
 %titlepage
 \thispagestyle{letterUFSC}
 \addtolength{\voffset}{-30pt}
 
-\vspace*{30pt}
+\vspace*{40pt}
 
 \begin{center}
 %----------------------------------------------------------------------------------------
@@ -334,17 +334,15 @@
 
 \centerline{\huge \textbf{Plano de aula -- \imprimiraula}}
 
+\vspace*{20pt}
+
 \begin{table}[!h]
-	\centering
-	\begin{tabular}{l|l}	\toprule
-		\multicolumn{2}{l}{\textbf{Dados de IdentificaÁ„o}} \\	\hline
-		Professor:         &    \imprimirautor           \\	\hline
-		Disciplina:        &   \imprimircodigo {} --  \imprimirdisciplina          \\	\hline
-		Tema:              &    \imprimirtitulo                \\	\hline
-		Semestre:          &    \imprimirsemestre          \\	\hline
-		Turma:          &    \imprimirturma          \\	\hline
-		Sala:              &    \imprimirsala             \\	\hline
-		Hor·rio:   &    \imprimirhorario         \\ \hline	\bottomrule
+	\begin{tabular}{ll} \multicolumn{2}{l}{\textbf{\large{Dados de identifica√ß√£o}}} \\	\toprule \toprule
+			Professor:         &    \imprimirautor           \\	\midrule
+		Disciplina:        &   \imprimircodigo {} --  \imprimirdisciplina          \\	\midrule
+		Tema:              &    \imprimirtitulo                \\	\midrule
+		Semestre:          &    \imprimirsemestre          \\	\midrule
+		Hor√°rio:   &    \imprimirhorario         \\ \bottomrule \bottomrule
 	\end{tabular}
 \end{table}
 
